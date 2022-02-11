@@ -1,5 +1,6 @@
-$body-color: hsl(235, 46%, 20%);
-$cards_color: hsl(246, 80%, 60%);
+$body-color: hsl(226, 43%, 10%);
+$main-color: hsl(246, 80%, 60%);
+$cards_color: hsl(235, 46%, 20%);
 $work-color: hsl(15, 100%, 70%);
 $play-color: hsl(195, 74%, 62%);
 $study-color: hsl(348, 100%, 68%);
@@ -9,56 +10,100 @@ $self-color: hsl(43, 84%, 65%);
 
 body {
   background-color: $body-color;
+  color:hsl(236, 100%, 87%);
+  font-size: 18px;
 }
 
 .container{
   display: grid;
-  justify-content: center;
   grid-template:
   "main work play study"
   "main exs social self";
-  grid-template-columns: 250px;
-  grid-template-rows: 165px;
+  justify-items: end;
+  grid-template-columns: 230px;
+  grid-template-rows: 250px;
   height: 1080px;
   width: 1050px;
   margin-top: 150px;
-  margin-left: 75px;
-  margin-right: 75px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 #app {
   height: 100vh;
   width: 1440px;
 }
+
+.switcher {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 30px;
+  text-decoration: none;
+  color: hsl(235, 45%, 61%);
+}
+
 .main_card {
+  align-items: center;
   grid-area: main;
-  height: 300px;
-  width: 200px;
+  height: 500px;
+  width: 220px;
   background-color: $cards_color;
+  box-sizing: border-box;
+  border-radius: 5%;
+}
+.main_info {
+  display: flex;
+  flex-direction: column;
+  background-color: $main-color;
+  height: 340px;
+  border-radius: 5%;
 }
 
 .cards {
   background-color: $cards_color;
-  width: 150px;
-  height: 135px;
+  width: 220px;
+  height: 235px;
+  box-sizing: border-box;
+  border-radius: 5%;
 }
 
 .work_card {
-
+  background-color: $work-color;
   grid-area: work;
 }
 
 .play_card {
   grid-area: play;
+  background-color: $play-color;
+
 }
 
 .study_card {
   grid-area: study;
+  background-color: $study-color;
+
 }
 
-.sociad_card {
-  grid-area: social
+.social_card {
+  grid-area: social;
+  background-color: $social-color;
+
 }
 
 .exercise_card {
   grid-area: exs;
+  background-color: $exercise-color;
+}
+
+.self_card {
+  grid-area: self;
+  background-color: $self-color;
+}
+.card_info {
+  background-color: $cards_color;
+  height: 180px;
+  margin-top: 55px;
+  border-radius: 5%;
+  font-size: 18px;
 }
