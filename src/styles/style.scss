@@ -10,15 +10,13 @@ $self-color: hsl(43, 84%, 65%);
 
 body {
   background-color: $body-color;
-  color:hsl(236, 100%, 87%);
+  color: hsl(236, 100%, 87%);
   font-size: 18px;
 }
 
-.container{
+.container {
   display: grid;
-  grid-template:
-  "main work play study"
-  "main exs social self";
+  grid-template: "main work play study" "main exs social self";
   justify-items: end;
   grid-template-columns: 230px;
   grid-template-rows: 250px;
@@ -28,6 +26,7 @@ body {
   margin-left: 250px;
   margin-right: 250px;
 }
+
 #app {
   height: 100vh;
   width: 1440px;
@@ -52,6 +51,7 @@ body {
   box-sizing: border-box;
   border-radius: 5%;
 }
+
 .main_info {
   display: flex;
   flex-direction: column;
@@ -100,6 +100,7 @@ body {
   grid-area: self;
   background-color: $self-color;
 }
+
 .card_info {
   background-color: $cards_color;
   height: 180px;
