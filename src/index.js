@@ -1,9 +1,11 @@
-import imageSrc from '../assets/images/image-jeremy.png';
+import './styles/userCard.css'
+import './styles/style.scss'
+import Image from './assets/images/image-jeremy.png'
 
 const card = `
 <div class="main_card">
     <div class="main_info">
-        <img class="avatar" src="../assets/images/image-jeremy.png" alt="jeremy-avatar">
+        <img src="./image-jeremy.png">
         <span class="card_report">Report for</span>
         <span class="card_jeremy">Jeremy Robson</span>
     </div>
@@ -13,8 +15,7 @@ const card = `
         <span class="monthly">Monthly</span>
     </div>
 </div>
-`;
-
+`
 const exsCard = `
 <div class="cards exercise_card">
     <span>.</span>
@@ -22,8 +23,7 @@ const exsCard = `
         <span>Exercise</span>
     </div>
 </div>
-`;
-
+`
 const workCard = `
 <div class="cards work_card">
     <span>.</span>
@@ -31,8 +31,7 @@ const workCard = `
         <span>Work</span>
     </div>
 </div>
-`;
-
+`
 const studyCard = `
 <div class="cards study_card">
     <span>.</span>
@@ -40,8 +39,7 @@ const studyCard = `
         <span>Study</span>
     </div>
 </div>
-`;
-
+`
 const playCard = `
 <div class="cards play_card">
     <span>.</span>
@@ -49,8 +47,7 @@ const playCard = `
         <span>Play</span>
     </div>
 </div>
-`;
-
+`
 const socialCard = `
 <div class="cards social_card">
     <span>.</span>
@@ -58,8 +55,7 @@ const socialCard = `
         <span>Social</span>
     </div>
 </div>
-`;
-
+`
 const selfCard = `
 <div class="cards self_card">
     <span>.</span>
@@ -67,7 +63,7 @@ const selfCard = `
         <span>Self Care</span>
     </div>
 </div>
-`;
+`
 
 const container = `
 <div class='container'>   
@@ -79,11 +75,7 @@ const container = `
     ${socialCard}
     ${selfCard}
 </div>
-`;
+`
 
 
-let app = document.querySelector('#app');
-app.innerHTML += container;
-
-let img = document.querySelector('.avatar');
-img.src = imageSrc;
+const app = document.querySelector('#app').innerHTML += container
