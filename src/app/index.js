@@ -8,9 +8,9 @@ const card = `
         <span class="card_jeremy">Jeremy Robson</span>
     </div>
     <div class="switcher">
-        <span class="daily">Daily</span>
-        <span class="weekly">Weekly</span>
-        <span class="monthly">Monthly</span>
+        <a href="#" class="daily">Daily</a>
+        <a href="#" class="weekly">Weekly</a>
+        <a href="#" class="monthly">Monthly</a>
     </div>
 </div>
 `;
