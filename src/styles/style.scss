@@ -8,7 +8,13 @@ $exercise-color: hsl(145, 58%, 55%);
 $social-color: hsl(264, 64%, 52%);
 $self-color: hsl(43, 84%, 65%);
 
+@import '~font-awesome/css/font-awesome.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+
+$fontFamily: "Rubik", sans-serif;
 body {
+  font-family: $fontFamily;
   background-color: $body-color;
   color: hsl(236, 100%, 87%);
   font-size: 18px;
@@ -19,7 +25,7 @@ body {
   grid-template: "main work play study" "main exs social self";
   justify-items: end;
   grid-template-columns: 230px;
-  grid-template-rows: 250px;
+  grid-template-rows: 240px;
   height: 1080px;
   width: 1050px;
   margin-top: 150px;
@@ -32,40 +38,73 @@ body {
   width: 1440px;
 }
 
-.switcher {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  padding: 30px;
-  text-decoration: none;
-  color: hsl(235, 45%, 61%);
-}
+
 
 .main_card {
+  position: relative;
   align-items: center;
   grid-area: main;
-  height: 500px;
+  height: 400px;
   width: 220px;
   background-color: $cards_color;
-  box-sizing: border-box;
   border-radius: 5%;
+  .main_info {
+    display: flex;
+    flex-direction: column;
+    background-color: $main-color;
+    height: 225px;
+    border-radius: 5%;
+    padding: 30px;
+    .avatar {
+      background-color: white;
+      width: 60px;
+      border: 3px solid white;
+      border-radius: 90%;
+    }
+
+    .card_report {
+      font-size: 12px;
+      font-weight: 300;
+      margin-top: 30px;
+      line-height: 1.5;
+    }
+
+    .card_jeremy {
+      font-weight: 300;
+      font-size: 35px;
+      color: #E0E0E0;
+    }
+  }
+
+  .switcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 25px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.5;
+    .daily:hover, .weekly:hover, .monthly:hover{
+      color: white;
+      text-decoration: none;
+    }
+    .daily, .weekly, .monthly{
+      text-decoration: none;
+      color: hsl(235, 45%, 61%);
+    }
+  }
 }
 
-.main_info {
-  display: flex;
-  flex-direction: column;
-  background-color: $main-color;
-  height: 340px;
-  border-radius: 5%;
-}
+
 
 .cards {
   background-color: $cards_color;
   width: 220px;
-  height: 235px;
+  height: 195px;
   box-sizing: border-box;
   border-radius: 5%;
+  z-index: 100;
 }
 
 .work_card {
@@ -103,8 +142,9 @@ body {
 
 .card_info {
   background-color: $cards_color;
-  height: 180px;
+  height: 135px;
   margin-top: 55px;
   border-radius: 5%;
   font-size: 18px;
+  z-index: 1;
 }
